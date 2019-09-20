@@ -1,3 +1,6 @@
+const hasOwnProperty = (obj, key) =>
+  Object.prototype.hasOwnProperty.call(obj, key)
+
 module.exports = function (args, opts) {
     if (!opts) opts = {};
 
@@ -36,7 +39,7 @@ module.exports = function (args, opts) {
 
     var argv = { _ : [] };
     Object.keys(flags.bools).forEach(function (key) {
-        setArg(key, defaults.hasOwnProperty(key) ? defaults[key]: false);
+        setArg(key, hasOwnProperty(defaults, key) ? defaults[key]: false);
     });
 
     var notFlags = [];

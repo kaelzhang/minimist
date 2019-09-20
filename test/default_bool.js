@@ -35,11 +35,12 @@ test('boolean default to null', function (t) {
 })
 
 test('boolean groups, with default', function (t) {
+  const defaults = Object.create(null)
+  defaults.y = undefined
+
   var argv = parse([ '-x', '-z', 'one', 'two', 'three' ], {
       boolean: ['x','y','z'],
-      default: {
-        y: undefined
-      }
+      default: defaults
   });
 
   t.deepEqual(argv, {
