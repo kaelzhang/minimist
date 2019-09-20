@@ -1,4 +1,23 @@
-# minimist
+# @ostai/minimist
+
+The fork of [substack/minimist](https://github.com/substack/minimist).
+
+The different is that
+
+```js
+const argv = require('@ostai/minimist')(['node', 'foo.js', '-x'], {
+  boolean: ['x'],
+  default: {
+    undefined
+  }
+})
+
+console.log(argv.x)
+// undefined
+// while if you are using `minimist`, argv.x will be `false`
+```
+
+****
 
 parse argument options
 
@@ -7,12 +26,12 @@ fanciful decoration.
 
 [![browser support](https://ci.testling.com/substack/minimist.png)](http://ci.testling.com/substack/minimist)
 
-[![build status](https://secure.travis-ci.org/substack/minimist.png)](http://travis-ci.org/substack/minimist)
+[![Build Status](https://travis-ci.org/kaelzhang/minimist.svg?branch=master)](https://travis-ci.org/kaelzhang/minimist)
 
 # example
 
 ``` js
-var argv = require('minimist')(process.argv.slice(2));
+var argv = require('@ostai/minimist')(process.argv.slice(2));
 console.dir(argv);
 ```
 
@@ -36,7 +55,7 @@ $ node example/parse.js -x 3 -y 4 -n5 -abc --beep=boop foo bar baz
 # methods
 
 ``` js
-var parseArgs = require('minimist')
+var parseArgs = require('@ostai/minimist')
 ```
 
 ## var argv = parseArgs(args, opts={})

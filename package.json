@@ -1,5 +1,5 @@
 {
-  "name": "minimist",
+  "name": "@ostai/minimist",
   "version": "1.2.0",
   "description": "parse argument options",
   "main": "index.js",
@@ -27,14 +27,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/substack/minimist.git"
+    "url": "git://github.com/kaelzhang/mininist.git"
   },
-  "homepage": "https://github.com/substack/minimist",
+  "homepage": "https://github.com/kaelzhang/mininist",
   "keywords": [
     "argv",
     "getopt",
     "parser",
-    "optimist"
+    "optimist",
+    "undefined",
+    "boolean"
   ],
   "author": {
     "name": "James Halliday",
