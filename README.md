@@ -1,20 +1,23 @@
+[![Build Status](https://travis-ci.org/kaelzhang/minimist.svg?branch=master)](https://travis-ci.org/kaelzhang/minimist)
+
 # @ostai/minimist
 
 The fork of [substack/minimist](https://github.com/substack/minimist).
 
-The different is that
+The difference is that
 
 ```js
 const argv = require('@ostai/minimist')(['node', 'foo.js', '-x'], {
   boolean: ['x'],
   default: {
-    undefined
+    x: undefined
   }
 })
 
 console.log(argv.x)
 // undefined
-// while if you are using `minimist`, argv.x will be `false`
+
+// while if you are using `minimist`, `argv.x` will be `false`
 ```
 
 ****
@@ -25,8 +28,6 @@ This module is the guts of optimist's argument parser without all the
 fanciful decoration.
 
 [![browser support](https://ci.testling.com/substack/minimist.png)](http://ci.testling.com/substack/minimist)
-
-[![Build Status](https://travis-ci.org/kaelzhang/minimist.svg?branch=master)](https://travis-ci.org/kaelzhang/minimist)
 
 # example
 
